@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;700&family=Montserrat:wght@500;700&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blanco: #ecfee8;
+  --azulOscuro: #0b3142;
+  --azulDodge: #0496ff;
+  --grisBistre: #7a6c5d;
+  --negroSmocked: #0d080a;
+}
+body {
+  background-color: var(--blanco);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--azulDodge);
+}
+.contenedor {
+  
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1% auto;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+}
+.header img {
+  width: 150px;
+  object-fit: cover;
+  border-radius: 20px 0 0 0;
+}
+.header svg {
+  fill: var(--azulDodge);
+}
+.navMenu {
+  color: var(--negroSmocked);
+  display: flex;
+  list-style: none;
+}
+.navItem {
+  text-transform: uppercase;
+  width: max-content;
+  padding: 0px 20px;
+  color: var(--negroSmocked);
+}
+.navItem:hover {
+  cursor: pointer;
+  color: var(--azulDodge);
+  transition: 0.5s;
+}
+.promo{
+    padding: 15px;
+    background-color: white;
+    width: 100%;
+}
+.producto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    background-color: white;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 30%;
+    max-width: 333px;
+    border-radius: 15px;
+    box-shadow: 2px 5px 5px var(--grisBistre);
+    margin: 5px 1.5%;
+}
+.tarjeta:hover{
+    background-color: var(--blanco);
+}
+.tarjeta img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+@media screen and (max-widtg: 768px) {
+  .contenedor {
+    max-width: 750px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contenedor {
+    max-width: 560px;
+    text-align: center;
+  }
+  .navMenu {
+    flex-direction: column;
+}
+}

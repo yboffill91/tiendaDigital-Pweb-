@@ -5,19 +5,19 @@
   box-sizing: border-box;
 }
 :root {
-  --azulPrimario: #5386e4;
-  --negroSecundario: #001524;
-  --grisDesabilitado: hsl(210, 5%, 68%);
-  --blancoFondos: #e3d8f1;
+  --colorPrim: #fca311;
+  --colorSec: #14213d;
+  --desabled:#e5e5e5;
+  --colorTres: #f1faee;
 }
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  color: var(--negroSecundario);
-  background-color: var(--blancoFondos);
+  color: var(--colorSec);
+  background-color: var(--colorTres);
 }
 svg {
-  fill: var(--negroSecundario);
+  fill: var(--colorSec);
 }
 .contenedor{
   width: 90%;
@@ -33,12 +33,12 @@ svg {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  background-color: var(--azulPrimario);
+  background-color: var(--colorPrim);
   padding: 25px;
 }
 .logo{
   border-radius: 15px;
-  background-color: var(--blancoFondos);
+  background-color: var(--colorTres);
   padding: 5px;
   width: 150px;
 }
@@ -53,18 +53,18 @@ svg {
     padding: 5px;
 }
 .navItem:active{
-  background-color: var(--negroSecundario);
+  background-color: var(--colorSec);
 }
 .buscar{
   border: 0;
   border-bottom: solid;
-  border-color: var(--azulPrimario);
-  background-color: var(--blancoFondos);
+  border-color: var(--colorPrim);
+  background-color: var(--colorTres);
   padding: 10px;
   border-radius: 25px;
 }
 .buscar::placeholder{
-  color: var(--grisDesabilitado);
+  color: var(--desabled);
 }
 .promo{
   width: 100%;
@@ -72,9 +72,9 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--azulPrimario);
+  background-color: var(--colorPrim);
   border-radius: 0px 0px 25px 25px;
-  box-shadow: 0px 25px 25px var(--grisDesabilitado);
+  box-shadow: 0px 25px 25px var(--desabled);
   padding: 0 0 25px 0;
 }
 .promo img{
@@ -91,7 +91,7 @@ svg {
 .tarjeta{
   border-radius: 25px;
   width: 300px;
-  box-shadow: 5px 0px 15px var(--grisDesabilitado);
+  box-shadow: 5px 0px 15px var(--desabled);
   margin: 15px;
   padding: 15px;
 
@@ -103,7 +103,7 @@ svg {
   border-radius: 15px 15px 0px 0px;
 }
 .tarjetaInterior{
-  background-color: var(--grisDesabilitado);
+  background-color: var(--desabled);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -111,11 +111,11 @@ svg {
   justify-content: center;
 }
 .nombreProducto{
-  color: var(--azulPrimario);
+  color: var(--colorPrim);
   font-weight: 700;
   text-align: center;
   padding: 5px 5px 25px 5px;
-  background-color: var(--negroSecundario);
+  background-color: var(--colorSec);
   border-radius:  0px 0px 15px 15px;
 }
 .descripcionProducto{
@@ -124,34 +124,34 @@ svg {
 }
 .precio{
   font-weight: 700;
-  color: var(--negroSecundario);
+  color: var(--colorSec);
   text-decoration: underline;
   padding: 15px auto;
 }
 .addCar{
   margin: 15px;
-  background-color: var(--negroSecundario);
+  background-color: var(--colorSec);
   border: 0;
   border-radius: 15px;
   padding: 2px 15px;
-  color: var(--blancoFondos);
+  color: var(--colorTres);
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .addCar svg{
-  fill: var(--blancoFondos);
+  fill: var(--colorTres);
   width: 30px;
   padding: 0px 5px;
 }
 .addCar:active{
   cursor: pointer;
-    background-color: var(--azulPrimario);
+    background-color: var(--colorPrim);
 }
 .footer{
-  background-color: var(--negroSecundario);
-  color: var(--blancoFondos);
+  background-color: var(--colorSec);
+  color: var(--colorTres);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -160,11 +160,11 @@ svg {
   width: 100%;
   height: 150px;
   border-radius: 25px 25px 0px 0px;
-  box-shadow: 5px 10px 25px var(--grisDesabilitado);
+  box-shadow: 5px 10px 25px var(--desabled);
 }
 .footer img{
   width: 100px;
-  background-color: var(--blancoFondos);
+  background-color: var(--colorTres);
   border-radius: 5px;
   padding: 5px;
 }
@@ -210,19 +210,19 @@ svg {
 @media (hover:hover){
   /*----hover query-----*/
   .navItem:hover{
-    color: var(--azulPrimario);
+    color: var(--colorPrim);
     cursor: pointer;
-    background-color: var(--negroSecundario);
+    background-color: var(--colorSec);
     border-radius: 15px;
   }
   .car svg:hover{
-    fill: var(--azulPrimario);
+    fill: var(--colorPrim);
     border-radius: 50%;
-    background-color: var(--negroSecundario);
+    background-color: var(--colorSec);
     cursor: pointer;
   }
   .addCar:hover{
     cursor: pointer;
-    background-color: var(--azulPrimario);
+    background-color: var(--colorPrim);
   }
 }

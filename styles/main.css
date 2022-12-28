@@ -111,11 +111,11 @@ svg {
   justify-content: center;
 }
 .nombreProducto{
-  color: var(--colorPrim);
+  color: var(--colorSec);
   font-weight: 700;
   text-align: center;
-  padding: 5px 5px 25px 5px;
-  background-color: var(--colorSec);
+  padding: 5px 5px 15px 5px;
+  background-color: var(--colorPrim);
   border-radius:  0px 0px 15px 15px;
 }
 .descripcionProducto{

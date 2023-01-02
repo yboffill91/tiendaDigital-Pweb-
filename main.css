@@ -7,7 +7,7 @@
 :root {
   --colorPrim: #fca311;
   --colorSec: #14213d;
-  --desabled:#e5e5e5;
+  --desabled: #e5e5e5;
   --colorTres: #f1faee;
 }
 body {
@@ -19,7 +19,7 @@ body {
 svg {
   fill: var(--colorSec);
 }
-.contenedor{
+.contenedor {
   width: 90%;
   max-width: 1440px;
   display: flex;
@@ -28,7 +28,7 @@ svg {
   justify-content: center;
   margin: 0px auto 0px auto;
 }
-.header{
+.header {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -36,26 +36,29 @@ svg {
   background-color: var(--colorPrim);
   padding: 25px;
 }
-.logo{
+.logo {
   border-radius: 15px;
   background-color: var(--colorTres);
   padding: 5px;
   width: 150px;
 }
-.navMenu{
+.navMenu {
   display: flex;
   list-style: none;
 }
-.navItem{
-    text-transform: uppercase;
-    width: max-content;
-    margin: 0px 20px;
-    padding: 5px;
+.navItem {
+  text-transform: uppercase;
+  width: max-content;
+  margin: 0px 20px;
+  padding: 5px;
 }
-.navItem:active{
+.navItem:active {
+  color: var(--colorPrim);
+  cursor: pointer;
   background-color: var(--colorSec);
+  border-radius: 15px;
 }
-.buscar{
+.buscar {
   border: 0;
   border-bottom: solid;
   border-color: var(--colorPrim);
@@ -63,10 +66,10 @@ svg {
   padding: 10px;
   border-radius: 25px;
 }
-.buscar::placeholder{
+.buscar::placeholder {
   color: var(--desabled);
 }
-.promo{
+.promo {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -77,32 +80,31 @@ svg {
   box-shadow: 0px 25px 25px var(--desabled);
   padding: 0 0 25px 0;
 }
-.promo img{
+.promo img {
   width: 150px;
   object-fit: cover;
 }
-.producto{
+.prodContenet {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 15px;
 }
-.tarjeta{
+.tarjeta {
   border-radius: 25px;
   width: 300px;
   box-shadow: 5px 0px 15px var(--desabled);
   margin: 15px;
   padding: 15px;
-
 }
-.tarjeta img{
+.tarjeta img {
   width: 270px;
   height: 300px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
-.tarjetaInterior{
+.tarjetaInterior {
   background-color: var(--desabled);
   border-radius: 15px;
   display: flex;
@@ -110,25 +112,25 @@ svg {
   align-items: center;
   justify-content: center;
 }
-.nombreProducto{
+.nombreProducto {
   color: var(--colorSec);
   font-weight: 700;
   text-align: center;
   padding: 5px 5px 15px 5px;
   background-color: var(--colorPrim);
-  border-radius:  0px 0px 15px 15px;
+  border-radius: 0px 0px 15px 15px;
 }
-.descripcionProducto{
+.descripcionProducto {
   font-size: 14px;
   padding: 15px 0px;
 }
-.precio{
+.precio {
   font-weight: 700;
   color: var(--colorSec);
   text-decoration: underline;
   padding: 15px auto;
 }
-.addCar{
+.addCar {
   margin: 15px;
   background-color: var(--colorSec);
   border: 0;
@@ -140,16 +142,16 @@ svg {
   align-items: center;
   justify-content: space-around;
 }
-.addCar svg{
+.addCar svg {
   fill: var(--colorTres);
   width: 30px;
   padding: 0px 5px;
 }
-.addCar:active{
+.addCar:active {
   cursor: pointer;
-    background-color: var(--colorPrim);
+  background-color: var(--colorPrim);
 }
-.footer{
+.footer {
   background-color: var(--colorSec);
   color: var(--colorTres);
   display: flex;
@@ -162,66 +164,68 @@ svg {
   border-radius: 25px 25px 0px 0px;
   box-shadow: 5px 10px 25px var(--desabled);
 }
-.footer img{
+.footer img {
   width: 100px;
   background-color: var(--colorTres);
   border-radius: 5px;
   padding: 5px;
 }
 /*----------------@media querys-------------------------*/
-@media screen and (max-width: 830px){
+@media screen and (max-width: 830px) {
   /*-----tablet query---*/
-  .contenedor{
+  .contenedor {
     max-width: 700px;
   }
-  .header{
+  .header {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .navMenu{
+  .navMenu {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 679px) {
   /*-----movil query----*/
-  .contenedor{
+  .contenedor {
     max-width: 500px;
   }
-  .header{
+  .header {
     flex-direction: column;
   }
-  .navMenu{
+  .navMenu {
     flex-direction: row;
   }
 }
-@media screen and (max-width:281px){
-  .contenedor {width: 100%;
-  padding: 0px;}
+@media screen and (max-width: 281px) {
+  .contenedor {
+    width: 100%;
+    padding: 0px;
+  }
 }
-.header{
+.header {
   padding: 0px;
 }
-.logo{
+.logo {
   width: 100px;
 }
-.tarjeta{
+.tarjeta {
   margin: 0px;
 }
-@media (hover:hover){
+@media (hover: hover) {
   /*----hover query-----*/
-  .navItem:hover{
+  .navItem:hover {
     color: var(--colorPrim);
     cursor: pointer;
     background-color: var(--colorSec);
     border-radius: 15px;
   }
-  .car svg:hover{
+  .car svg:hover {
     fill: var(--colorPrim);
     border-radius: 50%;
     background-color: var(--colorSec);
     cursor: pointer;
   }
-  .addCar:hover{
+  .addCar:hover {
     cursor: pointer;
     background-color: var(--colorPrim);
   }

@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 :root {
-  --colorPrim: #fca311;
-  --colorSec: #14213d;
-  --desabled: #e5e5e5;
-  --colorTres: #f1faee;
+  --colorPrim: #3772FF;
+  --colorSec: #080708;
+  --desabled: #C2D4FF;
+  --colorTres: #FFFFFF;
 }
 body {
   font-family: "Ubuntu", sans-serif;
@@ -69,6 +69,13 @@ svg {
 .buscar::placeholder {
   color: var(--desabled);
 }
+.car{
+  position: fixed;
+  z-index: 9;
+  top:50vh;
+  left: 5px;
+  background-color: var(--colorPrim);
+}
 .promo {
   width: 100%;
   display: flex;
@@ -92,10 +99,11 @@ svg {
   padding: 15px;
 }
 .tarjeta {
-  border-radius: 25px;
+  border-radius: 25px 25px 25px 0;
+  background-color: var(--desabled);
   width: 300px;
-  box-shadow: 5px 0px 15px var(--desabled);
-  margin: 15px;
+  box-shadow: 5px 0px 15px var(--colorTres);
+  margin: 15px 25px 0px 15px;
   padding: 15px;
 }
 .tarjeta img {
@@ -103,6 +111,7 @@ svg {
   height: 300px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
+  background-color: var(--colorTres);
 }
 .tarjetaInterior {
   background-color: var(--desabled);
@@ -130,24 +139,25 @@ svg {
   text-decoration: underline;
   padding: 15px auto;
 }
-.addCar {
-  margin: 15px;
-  background-color: var(--colorSec);
+button {
+  margin: 0px 55px 25px 15px;
+  background-color: var(--desabled);
   border: 0;
-  border-radius: 15px;
-  padding: 2px 15px;
-  color: var(--colorTres);
+  border-radius: 0px 0px 15px 15px;
+  padding: 1px 15px;
+  color: var(--colorSec);
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 }
-.addCar svg {
-  fill: var(--colorTres);
+button svg {
+  fill: var(--colorSec);
   width: 30px;
   padding: 0px 5px;
 }
-.addCar:active {
+button:active {
   cursor: pointer;
   background-color: var(--colorPrim);
 }
@@ -169,6 +179,99 @@ svg {
   background-color: var(--colorTres);
   border-radius: 5px;
   padding: 5px;
+}
+/*-----------------carrito--modal-----------------------*/
+.modalConteiner {
+  width: 475px;
+  max-height: 90vh;
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px var(--colorSec);
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 5%;
+  scrollbar-color: var(--colorPrim);
+  display: flex;
+  flex-direction: column;
+}
+.mHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: var(--colorSec);
+  border-radius: 25px 25px 0 0;
+}
+.mHeader svg{
+  fill: var(--colorPrim);
+  width: 32px;
+}
+.mHeader h1 {
+  font-size: 22px;
+  color: var(--colorPrim);
+}
+.cerrarCarrito:hover{
+    cursor: pointer;
+}
+.modalLista{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--colorTres);
+  opacity: 95%;
+}
+.modalLista h3{
+  font-size: 16px;
+  color: var(--colorSec);
+  padding: 2px;
+}
+.modalLista img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.totales{
+  background-color: var(--colorPrim);
+  color: var(--colorSec);
+  padding: 15px;
+  text-align: center;
+}
+.metPago{
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--desabled);
+  border-radius: 0 0 25px 25px ;
+}
+.transfermovil{
+  color: var(--colorSec);
+  font-size: 15px;
+  padding: 2px 15px;
+  border: 0px;
+  border-radius: 25px;
+  background-color: var(--desabled);
+  box-shadow: 5px 5px 15px var(--colorSec);
+}
+.enzona{
+  color: var(--colorSec);
+  font-size: 15px;
+  padding: 2px 15px;
+  border: 0px;
+  border-radius: 25px;
+  background-color: var(--desabled);
+  box-shadow: 5px 5px 15px var(--colorSec);
+}
+.metPago button img{
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-right: 15px;
 }
 /*----------------@media querys-------------------------*/
 @media screen and (max-width: 830px) {
@@ -196,21 +299,7 @@ svg {
     flex-direction: row;
   }
 }
-@media screen and (max-width: 281px) {
-  .contenedor {
-    width: 100%;
-    padding: 0px;
-  }
-}
-.header {
-  padding: 0px;
-}
-.logo {
-  width: 100px;
-}
-.tarjeta {
-  margin: 0px;
-}
+
 @media (hover: hover) {
   /*----hover query-----*/
   .navItem:hover {
@@ -221,12 +310,12 @@ svg {
   }
   .car svg:hover {
     fill: var(--colorPrim);
-    border-radius: 50%;
     background-color: var(--colorSec);
     cursor: pointer;
   }
-  .addCar:hover {
+  button:hover {
     cursor: pointer;
     background-color: var(--colorPrim);
   }
 }
+

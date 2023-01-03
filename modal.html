@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .contenedor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal {
+      width: 230px;
+    }
+    .mHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: initial;
+      justify-content: space-between;
+    }
+    .mHeader svg {
+      width: 16px;
+    }
+    .mHeader span:hover{
+        cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="contenedor">
+      <div class="modal">
+        <div class="mHeader">
+          <h1>Carrito</h1>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              height="48"
+              width="48"
+            >
+              <path
+                d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"
+              /></svg
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

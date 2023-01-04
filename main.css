@@ -189,7 +189,8 @@ button:active {
 }
 /*-----------------carrito--modal-----------------------*/
 .modalConteiner {
-  width: 475px;
+  max-width: 475px;
+  width: 90%;
   max-height: 90vh;
   border-radius: 25px;
   box-shadow: 5px 5px 25px var(--colorSec);

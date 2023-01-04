@@ -148,11 +148,11 @@ svg {
 }
 button {
   margin: 0px 55px 25px 15px;
-  background-color: var(--desabled);
+  background-color: var(--colorSec);
   border: 0;
   border-radius: 0px 0px 15px 15px;
   padding: 1px 15px;
-  color: var(--colorSec);
+  color: var(--colorTres);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ button {
   text-align: center;
 }
 button svg {
-  fill: var(--colorSec);
+  fill: var(--colorTres);
   width: 30px;
   padding: 0px 5px;
 }

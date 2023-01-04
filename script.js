@@ -154,14 +154,14 @@ verCarrito.addEventListener("click", () => {
   const totalPagar=document.createElement("div");
   totalPagar.className="totales";
   totalPagar.innerHTML=`
-  <h3>Monto Total: &dollar;${total}.00</h3>
+  <h3 class="pagar">Monto Total: &dollar;${total}.00</h3>
 
   `
   let totalDesc=total-total/10;
   const descuento=document.createElement("div");
   descuento.innerHTML=`
-  <h3>Total a Pagar: &dollar;${totalDesc}.00</h3>
-  <h3>Ahorro de: &dollar;${total-totalDesc}.00</h3>
+  <h3 class="totReal">Total a Pagar: &dollar;${totalDesc}.00</h3>
+  <h3 class="ahorro">Ahorro de: &dollar;${total-totalDesc}.00</h3>
   `
   totalPagar.append(descuento);
   modal.append(totalPagar);

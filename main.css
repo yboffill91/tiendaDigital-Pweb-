@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 :root {
-  --colorPrim: #3772FF;
+  --colorPrim: #3772ff;
   --colorSec: #080708;
-  --desabled: #C2D4FF;
-  --colorTres: #FFFFFF;
+  --desabled: #c2d4ff;
+  --colorTres: #ffffff;
 }
 body {
   font-family: "Ubuntu", sans-serif;
@@ -17,7 +17,7 @@ body {
   background-color: var(--colorTres);
 }
 svg {
-  fill: var(--colorSec);
+  fill: var(--colorTres);
 }
 .contenedor {
   width: 90%;
@@ -39,8 +39,9 @@ svg {
 .logo {
   border-radius: 15px;
   background-color: var(--colorTres);
-  padding: 5px;
+  padding: 15px;
   width: 150px;
+  cursor: pointer;
 }
 .navMenu {
   display: flex;
@@ -51,6 +52,7 @@ svg {
   width: max-content;
   margin: 0px 20px;
   padding: 5px;
+  color: var(--colorTres);
 }
 .navItem:active {
   color: var(--colorPrim);
@@ -69,12 +71,14 @@ svg {
 .buscar::placeholder {
   color: var(--desabled);
 }
-.car{
+.car {
   position: fixed;
   z-index: 9;
-  top:50vh;
-  left: 5px;
+  top: 45vh;
+  left: 2px;
   background-color: var(--colorPrim);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px var(--desabled);
 }
 .promo {
   width: 100%;
@@ -86,6 +90,9 @@ svg {
   border-radius: 0px 0px 25px 25px;
   box-shadow: 0px 25px 25px var(--desabled);
   padding: 0 0 25px 0;
+}
+.promo h1{
+  color: var(--colorTres);
 }
 .promo img {
   width: 150px;
@@ -122,7 +129,7 @@ svg {
   justify-content: center;
 }
 .nombreProducto {
-  color: var(--colorSec);
+  color: var(--colorTres);
   font-weight: 700;
   text-align: center;
   padding: 5px 5px 15px 5px;
@@ -203,7 +210,7 @@ button:active {
   background-color: var(--colorSec);
   border-radius: 25px 25px 0 0;
 }
-.mHeader svg{
+.mHeader svg {
   fill: var(--colorPrim);
   width: 32px;
 }
@@ -211,10 +218,10 @@ button:active {
   font-size: 22px;
   color: var(--colorPrim);
 }
-.cerrarCarrito:hover{
-    cursor: pointer;
+.cerrarCarrito:hover {
+  cursor: pointer;
 }
-.modalLista{
+.modalLista {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -223,32 +230,55 @@ button:active {
   background-color: var(--colorTres);
   opacity: 95%;
 }
-.modalLista h3{
+.modalLista h3 {
   font-size: 16px;
   color: var(--colorSec);
   padding: 2px;
 }
-.modalLista img{
+.modalLista img {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
 }
-.totales{
+.totales {
   background-color: var(--colorPrim);
+  background-image: url(./src/icons/ofertas.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 25%;
+  opacity: 95%;
   color: var(--colorSec);
   padding: 15px;
   text-align: center;
 }
-.metPago{
+.pagar{
+  text-decoration: line-through;
+  font-weight: 400;
+  color: var(--desabled);
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.totReal{
+  color: var(--colorTres);
+  margin-bottom: 5px;
+}
+.ahorro{
+  text-decoration: underline;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+.metPago {
   padding: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--desabled);
-  border-radius: 0 0 25px 25px ;
+  border-radius: 0 0 25px 25px;
+  background-color: #3772ff;
 }
-.transfermovil{
+.transfermovil {
   color: var(--colorSec);
   font-size: 15px;
   padding: 2px 15px;
@@ -257,7 +287,7 @@ button:active {
   background-color: var(--desabled);
   box-shadow: 5px 5px 15px var(--colorSec);
 }
-.enzona{
+.enzona {
   color: var(--colorSec);
   font-size: 15px;
   padding: 2px 15px;
@@ -266,7 +296,7 @@ button:active {
   background-color: var(--desabled);
   box-shadow: 5px 5px 15px var(--colorSec);
 }
-.metPago button img{
+.metPago button img {
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -303,13 +333,12 @@ button:active {
 @media (hover: hover) {
   /*----hover query-----*/
   .navItem:hover {
-    color: var(--colorPrim);
+    color: var(--colorTres);
     cursor: pointer;
     background-color: var(--colorSec);
     border-radius: 15px;
   }
-  .car svg:hover {
-    fill: var(--colorPrim);
+  .car:hover {
     background-color: var(--colorSec);
     cursor: pointer;
   }
@@ -318,4 +347,3 @@ button:active {
     background-color: var(--colorPrim);
   }
 }
-

@@ -192,13 +192,12 @@ button:active {
   max-width: 475px;
   width: 90%;
   max-height: 90vh;
-  border-radius: 25px;
-  box-shadow: 5px 5px 25px var(--colorSec);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px var(--colorSec);
   position: fixed;
   overflow: auto;
   z-index: 9;
   top: 5%;
-  scrollbar-color: var(--colorPrim);
   display: flex;
   flex-direction: column;
 }
@@ -209,7 +208,7 @@ button:active {
   align-items: center;
   padding: 15px 25px;
   background-color: var(--colorSec);
-  border-radius: 25px 25px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 .mHeader svg {
   fill: var(--colorPrim);
@@ -219,9 +218,6 @@ button:active {
   font-size: 22px;
   color: var(--colorPrim);
 }
-.cerrarCarrito:hover {
-  cursor: pointer;
-}
 .modalLista {
   display: flex;
   flex-direction: row;
@@ -229,7 +225,7 @@ button:active {
   justify-content: space-around;
   text-align: center;
   background-color: var(--colorTres);
-  opacity: 95%;
+  opacity: 99%;
 }
 .modalLista h3 {
   font-size: 16px;
@@ -237,7 +233,6 @@ button:active {
   padding: 2px;
 }
 .modalLista img {
-  border-radius: 50%;
   width: 75px;
   height: 75px;
   object-fit: cover;
@@ -248,7 +243,7 @@ button:active {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 25%;
-  opacity: 95%;
+  opacity: 99%;
   color: var(--colorSec);
   padding: 15px;
   text-align: center;
@@ -276,28 +271,23 @@ button:active {
   justify-content: space-around;
   align-items: center;
   background-color: var(--desabled);
-  border-radius: 0 0 25px 25px;
-  background-color: #3772ff;
+  border-radius: 0 0 5px 5px;
 }
-.transfermovil {
-  color: var(--colorSec);
-  font-size: 15px;
-  padding: 2px 15px;
-  border: 0px;
-  border-radius: 25px;
-  background-color: var(--desabled);
-  box-shadow: 5px 5px 15px var(--colorSec);
+.botPago{
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--colorSec);
+  color: var(--desabled);
+  box-shadow: 5px 5px 10px var(--colorPrim) ;
+  cursor: pointer;
 }
-.enzona {
-  color: var(--colorSec);
-  font-size: 15px;
-  padding: 2px 15px;
-  border: 0px;
-  border-radius: 25px;
-  background-color: var(--desabled);
-  box-shadow: 5px 5px 15px var(--colorSec);
+.botPago:active{
+  background-color: var(--colorPrim);
 }
-.metPago button img {
+.botPago img {
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -334,17 +324,33 @@ button:active {
 @media (hover: hover) {
   /*----hover query-----*/
   .navItem:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
     color: var(--colorTres);
     cursor: pointer;
     background-color: var(--colorSec);
     border-radius: 15px;
   }
   .car:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
     background-color: var(--colorSec);
     cursor: pointer;
   }
   button:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
     cursor: pointer;
     background-color: var(--colorPrim);
+  }
+  .cerrarCarrito:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .botPago:hover{
+    background-color: var(--colorPrim);
+    transform: scaleY(1.1);
+    transition: 0.5s;
   }
 }

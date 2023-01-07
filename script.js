@@ -168,8 +168,10 @@ verCarrito.addEventListener("click", () => {
   const metPago=document.createElement("div");
   metPago.className="metPago";
   metPago.innerHTML=`
-  <button class="transfermovil"><img src="./src/icons/transfermovilico.png">Transfermovil</button>
-  <button class="enzona"><img src="./src/icons/enzonaico.png">EnZona</button>
+  <div class="botPago">
+  <img src="./src/icons/transfermovilico.png"><h3>Transfermovil</h3></div>
+  <div class="botPago">
+  <img src="./src/icons/enzonaico.png"><h3>EnZona</h3></div>
   `
   modal.append(metPago);
 });
